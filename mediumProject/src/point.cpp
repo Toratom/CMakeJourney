@@ -1,17 +1,22 @@
 #include <mediumProject/point.h>
 
-void Point::setX(float x) {
-	this->x = x;
+Point::Point(double x, double y) {
+	setX(x);
+	setY(y);
 }
 
-void Point::setY(float y) {
-	this->y = y;
+void Point::setX(double x) {
+	p(0) = x;
 }
 
-float Point::getX() const {
-	return x;
+void Point::setY(double y) {
+	p(1) = y;
 }
 
-float Point::getY() const {
-	return y;
+double Point::getX() const {
+	return p(0);
+}
+
+double Point::getY() const {
+	return p(1);
 }

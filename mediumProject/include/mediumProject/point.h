@@ -1,15 +1,15 @@
 #pragma once
+#include <mediumProject/matrix.h>
 
 class Point {
 private:
-	float x = 0;
-	float y = 0;
+	Vec2 p;
 
 public:
-	Point(float x, float y) : x{ x }, y{ y } {};
+	Point(double x, double y);
 
-	void setX(float x);
-	void setY(float y);
-	float getX() const;
-	float getY() const;
+	void setX(double x);
+	void setY(double y);
+	double getX() const;
+	double getY() const;
 };
