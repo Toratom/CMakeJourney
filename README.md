@@ -2,14 +2,16 @@
 
 ## Overview
 
-This small project was realized to better understand how to organize a project developped in C++ and how to use CMake. It is made of three independant toy projects:
+This small project was realized to better understand how to organize a project developped in C++ and how to use CMake. It is made of three independant toy projects and a bonus project:
 
 * ```smallProject``` corresponds to a project made up of just a few source files. It does not require much organization. It mainly uses CMake's ```add_executable()``` function.
 * ```mediumProject``` corresponds to a project with more files, leading to organization into modules/libraries. It exploits CMake's ```add_executable()```, ```add_library()``` and ```target_link_libraries()``` functions.
 * ```largeProject``` identical to ```mediumProject``` but with the use of third-party libraries found in the ```extern``` folder. It exploits CMake's ```add_executable()```, ```add_library()```, ```target_link_libraries()```, ```FetchContent_Declare()``` and ```FetchContent_MakeAvailable()``` functions.
+* ```vulkanProject``` a skeleton project inspired by [Khronos Vulkan Tutorial](https://docs.vulkan.org/spec/latest/index.html) but using CMake. It exploits CMake's ```add_executable()```, ```add_library()```, ```target_link_libraries()```, ```FetchContent_Declare()```, ```FetchContent_MakeAvailable()``` and ```find_packages()``` functions. 
 
 For more information on CMake, please refer to :
 * [Henry Schreiner's Introduction to Modern CMake](https://cliutils.gitlab.io/modern-cmake/)
+* [CMake's Using Dependencies Guide](https://cmake.org/cmake/help/latest/guide/using-dependencies/index.html#guide:Using%20Dependencies%20Guide)
 * The file: ```notes.pdf``` (handwritten notes in French)
 
 This project was realized in C++ and CMake.
@@ -18,7 +20,8 @@ This project was realized in C++ and CMake.
 
 The installation process is straightforward: 
 * Clone the repository.
-* Add a ```build``` folder to the root of one of the three projects.
+* Add a ```build``` folder to the root of one of the four projects.
+* *Only for ```vulkanProject```*, [VulkanSDK](https://vulkan.lunarg.com/sdk/home) must be installed on your machine.
 * Under Linux, use the following three commands:
   ```
   cmake -S . -B build

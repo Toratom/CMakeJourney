@@ -1,5 +1,6 @@
 include(FetchContent)
 
+#GLM
 FetchContent_Declare(
 	glm
 	GIT_REPOSITORY	https://github.com/g-truc/glm.git
@@ -7,6 +8,7 @@ FetchContent_Declare(
 )
 FetchContent_MakeAvailable(glm)
 
+#GLFW
 FetchContent_Declare(
 	glfw
 	GIT_REPOSITORY https://github.com/glfw/glfw
