@@ -3,9 +3,13 @@ project(vulkanProject LANGUAGES CXX)
 
 #GLM and GLFW
 add_subdirectory(extern)
-#Vulkan
-find_package(Vulkan REQUIRED)
 
 add_executable(app main.cpp)
 target_compile_features(app PUBLIC cxx_std_17)
-target_link_libraries(app PUBLIC glm::glm glfw Vulkan::Vulkan)
+find_package(Vulkan REQUIRED)
+target_link_libraries(app PUBLIC
+	glm::glm
+	glfw
+	Vulkan::Vulkan
+	imgui
+)

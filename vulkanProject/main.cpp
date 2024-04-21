@@ -6,6 +6,8 @@
 #include <glm/vec4.hpp>
 #include <glm/mat4x4.hpp>
 
+#include <imgui.h>
+
 #include <iostream>
 
 int main() {
@@ -18,10 +20,6 @@ int main() {
     vkEnumerateInstanceExtensionProperties(nullptr, &extensionCount, nullptr);
 
     std::cout << extensionCount << " extensions supported\n";
-
-    glm::mat4 matrix;
-    glm::vec4 vec;
-    auto test = matrix * vec;
 
     while (!glfwWindowShouldClose(window)) {
         glfwPollEvents();
